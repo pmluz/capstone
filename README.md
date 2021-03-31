@@ -282,6 +282,7 @@ The API will return four error types when requests fail:
 ### Authentication
 
 **Casting Assistant**
+<<<<<<< HEAD
 
 ```jsx
 eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkZaUUVGenM4RDJRZnp4SDF5S3lmOCJ9

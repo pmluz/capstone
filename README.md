@@ -1,4 +1,11 @@
 ## Full Stacka Nano - Capstone Project
+### Casting Agency
+The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies.
+
+The application allows:
+1. Casting Assistant to view actors and movies.
+2. Casting Director to view, create, delete, and modify actors. As well as, view and modify movies.
+3. Executive Producer to view, create, delete, and modify actors and movies.
 
 ## Getting Started
 

@@ -3,7 +3,7 @@ from sqlalchemy import Column, String, Integer
 from flask_sqlalchemy import SQLAlchemy
 import json
 
-database_path = os.environ['DATABASE_URL']
+database_path = os.environ.get('DATABASE_URL')
 if not database_path:
     database_name = "casting_agency"
     database_path = "postgres://{}/{}".format('localhost:5432', database_name)
@@ -37,7 +37,7 @@ def db_drop_and_create_all():
 
 
 class Actor(db.Model):
-    __tablename__ = 'actors'
+    __tablename__ = 'Actors'
 
     id = Column(Integer(), primary_key=True)
     name = Column(String(80), unique=True)
@@ -70,7 +70,7 @@ class Actor(db.Model):
 
 
 class Movie(db.Model):
-    __tablename__ = 'movies'
+    __tablename__ = 'Movies'
 
     id = Column(Integer(), primary_key=True)
     title = Column(String(80), unique=True)

@@ -31,8 +31,8 @@ def create_app(test_config=None):
     '''
 
     @app.route('/actors', methods=['GET'])
-    # @requires_auth('get:actors')
-    def get_actors():  #payload
+    @requires_auth('get:actors')
+    def get_actors(payload):  #payload
         try:
             selection = Actor.query.order_by(Actor.id).all()
 
@@ -129,8 +129,8 @@ def create_app(test_config=None):
 
     ## Routes for Movies
     @app.route('/movies', methods=['GET'])
-    # @requires_auth('get:movies')
-    def get_movies():  # payload
+    @requires_auth('get:movies')
+    def get_movies(payload):  # payload
         try:
             selection = Movie.query.order_by(Movie.id).all()
 
@@ -222,6 +222,10 @@ def create_app(test_config=None):
 
         except:
             abort(401)
+
+    @app.route('/', methods=['POST', 'GET'])
+    def health():   
+        return jsonify("Healthy")
 
     ## ERROR HANDLING
     @app.errorhandler(400)

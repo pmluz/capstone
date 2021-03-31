@@ -43,8 +43,8 @@ def get_token_auth_header():
             }, 401)
 
     header_parts = auth_header.split()
-    print("0: " + header_parts[0])
-    print("1: " + header_parts[1])
+    # print("0: " + header_parts[0])
+    # print("1: " + header_parts[1])
     if header_parts[0].lower() != 'bearer':
         raise AuthError(
             {
@@ -66,7 +66,7 @@ def get_token_auth_header():
             }, 401)
 
     token = header_parts[1]
-    print("TOKEN: " + token)
+    # print("TOKEN: " + token)
     return token
     # raise Exception('Not Implemented')
 

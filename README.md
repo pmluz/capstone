@@ -1,5 +1,4 @@
-## Full Stacka Nano - Capstone Project
-### Casting Agency
+## Casting Agency - FSND Capstone Project
 The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies.
 
 The application allows:
